@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generic POS — Program de vânzare pentru restaurante | Rădăuți (Radauti), Suceava</title>
+<meta name="description" content="Program de vânzare pentru restaurante și baruri în Rădăuți (Radauti) și Suceava. Instalare și probă gratuite, integrare cu casa de marcat.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://genericpos.ro/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ro_RO">
+<meta property="og:url" content="https://genericpos.ro/">
+<meta property="og:title" content="Generic POS — Program de vânzare pentru restaurante | Rădăuți (Radauti), Suceava">
+<meta property="og:description" content="Program de vânzare pentru restaurante și baruri în Rădăuți (Radauti) și Suceava. Instalare și probă gratuite, integrare cu casa de marcat.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Generic POS — Program de vânzare pentru restaurante | Rădăuți (Radauti), Suceava">
+<meta name="twitter:description" content="Program de vânzare pentru restaurante și baruri în Rădăuți (Radauti) și Suceava. Instalare și probă gratuite, integrare cu casa de marcat.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Generic POS",
+  "alternateName": ["Generic POS Radauti", "Generic POS Rădăuți", "Generic POS Suceava"],
+  "url": "https://genericpos.ro/",
+  "telephone": "+40721217437",
+  "email": "oferta@genericpos.ro",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Rădăuți",
+    "addressRegion": "Suceava",
+    "addressCountry": "RO"
+  },
+  "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Județul Suceava"},
+    {"@type": "AdministrativeArea", "name": "Judetul Suceava"},
+    {"@type": "City", "name": "Rădăuți"},
+    {"@type": "City", "name": "Radauti"},
+    {"@type": "City", "name": "Suceava"}
+  ],
+  "description": "Program de vânzare (POS) pentru restaurante, baruri și fast-food, cu instalare și suport direct în Rădăuți (Radauti) și județul Suceava."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Karla:wght@400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0b0d;
+  --bg-soft:#111113;
+  --surface:#18181b;
+  --surface2:#202024;
+  --surface3:#2a2a2f;
+  --border:#2c2c31;
+  --border-soft:#232327;
+  --accent:#ff5a1f;
+  --accent-2:#ff7a45;
+  --accent-soft:rgba(255,90,31,0.14);
+  --gold:#ffd23f;
+  --green:#22c55e;
+  --green-soft:rgba(34,197,94,0.14);
+  --red:#ef4444;
+  --blue:#3b82f6;
+  --text:#f4f2ee;
+  --text-dim:#c7c5c0;
+  --muted:#87858f;
+  --paper:#f6f3ec;
+  --paper-ink:#151310;
+  --display:'Sora',sans-serif;
+  --body:'Karla',sans-serif;
+  --data:'Quicksand',sans-serif;
+  --maxw:1120px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth; overflow-x:hidden;}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:var(--body); font-size:16px; line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%;}
+a{color:inherit;}
+h1,h2,h3{font-family:var(--display); text-wrap:balance; letter-spacing:-0.01em;}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 1.5rem;}
+.eyebrow{
+  font-family:var(--data); font-size:0.78rem; font-weight:700; letter-spacing:0.14em;
+  text-transform:uppercase; color:var(--accent-2);
+}
+section{padding:5.5rem 0;}
+@media (max-width:720px){ section{padding:3.5rem 0;} }
+
+/* ══ NAV ══ */
+.nav{
+  position:sticky; top:0; z-index:50;
+  background:rgba(11,11,13,0.86); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border-soft);
+}
+.nav-inner{
+  max-width:var(--maxw); margin:0 auto; padding:0.55rem 1.5rem;
+  min-height:64px; display:flex; align-items:center; justify-content:space-between;
+}
+.wordmark-block{ display:flex; flex-direction:column; gap:0.05rem; }
+.wordmark{
+  font-family:var(--display); font-weight:800; font-size:1.25rem; letter-spacing:-0.01em;
+  display:flex; align-items:baseline; gap:0.3rem;
+}
+.wordmark .dot{color:var(--accent);}
+.wordmark .pos-mark{ position:relative; }
+.wordmark .tm{ font-size:0.42em; vertical-align:super; margin-left:0.03em; color:var(--accent-2); }
+.wordmark-sub{
+  font-family:var(--data); font-size:0.52rem; font-weight:700; letter-spacing:0.08em;
+  text-transform:uppercase; color:var(--muted);
+}
+.nav-cta{
+  font-family:var(--body); font-weight:700; font-size:0.9rem;
+  padding:0.6rem 1.15rem; border-radius:9px;
+  background:var(--accent); color:#1a0800; text-decoration:none;
+  transition:transform 0.12s, background 0.15s;
+}
+.nav-cta:hover{ background:var(--accent-2); transform:translateY(-1px); }
+
+/* ══ HERO ══ */
+.hero{
+  padding:4.5rem 0 5rem;
+  background:
+    radial-gradient(ellipse 70% 60% at 18% -10%, rgba(255,90,31,0.16), transparent 65%),
+    radial-gradient(ellipse 50% 40% at 100% 0%, rgba(255,210,63,0.08), transparent 60%);
+}
+.hero-inner{ display:grid; grid-template-columns:minmax(0,1fr); gap:2.5rem; }
+.hero-head{ max-width:640px; min-width:0; }
+@media (min-width:1100px){
+  .hero-inner{ grid-template-columns:minmax(0,1fr) minmax(320px,440px); align-items:center; gap:2.5rem; }
+}
+.hero-head h1{
+  font-size:clamp(2.1rem,4.4vw,3.1rem); font-weight:800; line-height:1.12; margin:0.9rem 0 1.1rem;
+}
+@media (max-width:640px){
+  .hero-head h1{ font-size:clamp(1.3rem,6vw,1.9rem); }
+}
+.hero-head h1 em{ font-style:normal; color:var(--accent-2); }
+.hero-sub{ font-size:1.08rem; color:var(--text-dim); max-width:560px; }
+.hero-actions{ display:flex; flex-wrap:wrap; gap:0.8rem; margin-top:1.8rem; }
+.btn{
+  font-family:var(--body); font-weight:700; font-size:0.96rem;
+  padding:0.85rem 1.5rem; border-radius:11px; cursor:pointer; text-decoration:none;
+  display:inline-flex; align-items:center; gap:0.5rem; transition:transform 0.12s, background 0.15s, border-color 0.15s;
+  border:1.5px solid transparent;
+}
+.btn-primary{ background:var(--accent); color:#1a0800; }
+.btn-primary:hover{ background:var(--accent-2); transform:translateY(-1px); }
+.btn-ghost{ background:transparent; border-color:var(--border); color:var(--text); }
+.btn-ghost:hover{ border-color:var(--accent-2); color:var(--accent-2); }
+.hero-trust{
+  display:flex; flex-wrap:wrap; gap:1.4rem; margin-top:2.2rem;
+  font-family:var(--data); font-size:0.82rem; color:var(--muted); font-weight:600;
+}
+.hero-trust span{ display:flex; align-items:center; gap:0.4rem; }
+.hero-trust b{ color:var(--green); }
+
+/* ══ DEVICE FRAME (screen mockups) ══ */
+.hero-visual{ position:relative; display:flex; flex-direction:column; align-items:center; min-width:0; }
+.device{
+  background:#050506; border-radius:20px; padding:12px; min-width:0; width:100%;
+  box-shadow:0 30px 70px -20px rgba(0,0,0,0.65), 0 0 0 1px rgba(255,255,255,0.04);
+}
+/* Piciorul de monitor — ca mockup-ul să citească drept terminal all-in-one, nu doar un ecran plutitor */
+.device-stand{
+  width:58px; height:14px; border-radius:0 0 7px 7px; margin-top:-1px;
+  background:linear-gradient(180deg,#232327,#0a0a0b);
+  box-shadow:0 8px 16px -8px rgba(0,0,0,0.5);
+  position:relative;
+}
+.device-stand::before{
+  content:''; position:absolute; left:50%; top:-11px; transform:translateX(-50%);
+  width:16px; height:12px; background:#141416; border-radius:2px 2px 0 0;
+}
+/* Imprimantă termică alături — vizibilă doar când mockup-ul stă lângă text (desktop) */
+.printer{ display:none; }
+@media (min-width:1100px){
+  .hero-visual{ padding-bottom:8px; }
+  .printer{
+    display:block; position:absolute; right:-64px; bottom:-4px;
+    width:76px; height:48px; border-radius:8px 8px 5px 5px;
+    background:linear-gradient(155deg,#2c2c30,#0b0b0c 65%);
+    box-shadow:0 16px 32px -14px rgba(0,0,0,0.65), inset 0 1px 1px rgba(255,255,255,0.08);
+  }
+  .printer::before{
+    content:''; position:absolute; top:8px; left:50%; transform:translateX(-50%);
+    width:48px; height:6px; background:#000; border-radius:3px;
+  }
+  .printer-paper{
+    position:absolute; top:-20px; left:50%; transform:translateX(-50%) rotate(-3deg);
+    width:36px; height:28px; background:var(--paper); border-radius:2px;
+    box-shadow:0 10px 16px -10px rgba(0,0,0,0.55);
+  }
+}
+.device-screen{
+  background:var(--bg); border-radius:12px; overflow:hidden;
+  font-family:var(--body);
+}
+.m-topbar{
+  height:42px; display:flex; align-items:center; justify-content:space-between;
+  padding:0 0.8rem; background:var(--surface2); border-bottom:1px solid var(--border);
+}
+.m-topbar-left{ display:flex; align-items:center; gap:0.5rem; font-weight:800; font-size:0.82rem; }
+.m-back{
+  font-family:var(--data); font-size:0.68rem; font-weight:700; color:#062b12;
+  background:var(--green); padding:0.3rem 0.6rem; border-radius:7px;
+}
+.m-cattabs{ display:flex; gap:0.35rem; padding:0.55rem; background:var(--surface); border-bottom:1px solid var(--border); overflow-x:auto; }
+.m-cattab{
+  flex-shrink:0; font-size:0.72rem; font-weight:800; padding:0.5rem 0.8rem; border-radius:9px;
+  background:var(--surface2); color:var(--text); border:1px solid var(--border); white-space:nowrap;
+}
+.m-cattab.active{ background:var(--accent); color:#fff; border-color:var(--accent); }
+.m-body{ display:flex; min-width:0; }
+.m-grid{
+  flex:1; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:0.5rem; padding:0.7rem; min-width:0;
+}
+.m-prod{
+  background:var(--surface); border:1px solid var(--border); border-radius:11px;
+  padding:0.65rem 0.4rem; text-align:center; display:flex; flex-direction:column; gap:0.25rem; align-items:center; min-width:0;
+}
+.m-prod .em{ font-size:1.5rem; }
+.m-prod .nm{ font-size:0.68rem; font-weight:700; line-height:1.15; overflow-wrap:anywhere; }
+.m-prod .pr{ font-family:var(--data); font-size:0.68rem; color:var(--gold); font-weight:600; }
+.m-cart{
+  width:170px; flex-shrink:0; background:var(--surface); border-left:1px solid var(--border);
+  display:flex; flex-direction:column;
+}
+.m-cart-head{ padding:0.5rem 0.7rem; font-weight:800; font-size:0.78rem; border-bottom:1px solid var(--border); }
+.m-cart-items{ padding:0.3rem 0.5rem; flex:1; }
+.m-cart-item{ padding:0.35rem 0.15rem; border-bottom:1px solid var(--border-soft); }
+.m-cart-item .nm{ font-size:0.68rem; font-weight:700; display:flex; justify-content:space-between; gap:0.3rem; }
+.m-cart-item .pr{ font-family:var(--data); color:var(--gold); font-size:0.68rem; white-space:nowrap; }
+.m-cart-item .opt{ font-size:0.6rem; color:var(--gold); opacity:0.85; margin-top:0.1rem; }
+.m-cart-foot{ padding:0.55rem 0.7rem; border-top:1px solid var(--border); }
+.m-total{ display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.4rem; }
+.m-total .lbl{ font-family:var(--data); font-size:0.6rem; color:var(--muted); letter-spacing:0.05em; }
+.m-total .val{ font-family:var(--data); font-size:1.05rem; font-weight:700; color:var(--gold); }
+.m-pay{ display:grid; grid-template-columns:1fr 1fr; gap:0.35rem; }
+.m-paybtn{ border-radius:8px; padding:0.4rem; text-align:center; font-size:0.62rem; font-weight:800; }
+.m-paybtn.cash{ background:var(--green); color:#062b12; }
+.m-paybtn.card{ background:var(--blue); color:#fff; }
+@media (max-width:560px){
+  .m-body{ flex-direction:column; }
+  .m-cart{ width:100%; border-left:none; border-top:1px solid var(--border); }
+}
+
+/* ══ MODE CARDS ══ */
+.modes{ display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-top:2.6rem; }
+@media (max-width:800px){ .modes{ grid-template-columns:1fr; } }
+.mode-card{
+  background:var(--surface); border:1px solid var(--border); border-radius:18px;
+  padding:1.8rem; display:flex; flex-direction:column; gap:1.1rem;
+}
+.mode-icon{
+  width:46px; height:46px; border-radius:12px; display:flex; align-items:center; justify-content:center;
+  font-size:1.4rem; background:var(--accent-soft); border:1px solid rgba(255,90,31,0.3);
+}
+.mode-card h3{ font-size:1.28rem; font-weight:700; }
+.mode-card p{ color:var(--text-dim); font-size:0.95rem; }
+
+/* Harta mini mockup */
+.m-harta{ position:relative; height:170px; border-radius:12px; overflow:hidden;
+  background:radial-gradient(ellipse 90% 55% at 50% 0%, rgba(255,111,33,0.12), transparent 70%),
+    linear-gradient(180deg,#242424 0%,#161616 45%,#0a0a0a 100%);
+  border:1px solid var(--border);
+}
+.m-zonetabs{ position:absolute; top:8px; left:8px; display:flex; gap:0.3rem; z-index:2; }
+.m-zonetab{ font-family:var(--data); font-size:0.58rem; font-weight:700; padding:0.3rem 0.55rem; border-radius:7px; background:var(--surface3); border:1px solid var(--border); }
+.m-zonetab.active{ background:var(--accent); border-color:var(--accent); color:#fff; }
+.m-masa{ position:absolute; display:flex; align-items:center; justify-content:center; font-family:var(--data); font-weight:800; font-size:0.72rem; box-shadow:0 2px 6px rgba(0,0,0,0.4); }
+.m-masa.libera{ background:var(--green); color:#062b12; border:2px solid #16a34a; }
+.m-masa.ocupata{ background:var(--red); color:#fff; border:2px solid #b91c1c; }
+.m-masa.round{ border-radius:50%; }
+.m-masa.square{ border-radius:10px; }
+.m-masa.rect{ border-radius:9px; }
+
+/* Tejgheaua mini mockup */
+.m-tejgheaua{ border-radius:12px; overflow:hidden; border:1px solid var(--border); background:var(--surface2); }
+
+/* ══ PAȘI (simplitate) ══ */
+.steps{ display:flex; align-items:stretch; gap:0; margin-top:2.4rem; flex-wrap:wrap; }
+.step{
+  flex:1; min-width:190px; background:var(--surface); border:1px solid var(--border); border-radius:16px;
+  padding:1.6rem 1.4rem; display:flex; flex-direction:column; gap:0.5rem;
+}
+.step .stepicon{ font-size:1.9rem; }
+.step .stepnum{ font-family:var(--data); font-size:0.7rem; font-weight:700; color:var(--accent-2); letter-spacing:0.06em; margin-top:0.2rem; }
+.step h4{ font-family:var(--display); font-size:1.08rem; font-weight:700; }
+.step p{ font-size:0.87rem; color:var(--text-dim); }
+.step-arrow{ display:flex; align-items:center; justify-content:center; padding:0 0.7rem; color:var(--muted); font-size:1.4rem; flex-shrink:0; }
+@media (max-width:760px){ .steps{ flex-direction:column; } .step-arrow{ display:none; } }
+
+/* ══ FEATURE SPLIT (mockup + text) ══ */
+.split{ display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center; }
+.split.rev{ grid-template-columns:1fr 1fr; }
+.split.rev .split-text{ order:2; }
+.split.rev .split-visual{ order:1; }
+@media (max-width:860px){
+  .split, .split.rev{ grid-template-columns:1fr; }
+  .split.rev .split-text, .split.rev .split-visual{ order:initial; }
+}
+.split-text h2{ font-size:clamp(1.6rem,3vw,2.1rem); font-weight:800; margin:0.7rem 0 1rem; line-height:1.2; }
+.split-text p{ color:var(--text-dim); font-size:1rem; max-width:480px; }
+.split-list{ list-style:none; margin-top:1.3rem; display:flex; flex-direction:column; gap:0.7rem; }
+.split-list li{ display:flex; gap:0.6rem; font-size:0.94rem; color:var(--text-dim); }
+.split-list li::before{ content:'✓'; color:var(--green); font-weight:800; flex-shrink:0; }
+
+/* Paper receipts */
+.paper{
+  background:var(--paper); color:var(--paper-ink); border-radius:6px;
+  padding:1.3rem 1.3rem 1.6rem; box-shadow:0 20px 50px -18px rgba(0,0,0,0.6);
+  font-family:var(--data); max-width:280px; margin:0 auto;
+  transform:rotate(-1.2deg);
+}
+.paper.compact{ transform:rotate(1deg); max-width:270px; }
+.p-header{ text-align:center; font-weight:700; font-size:1.05rem; letter-spacing:0.02em; }
+.p-sub{ text-align:center; font-size:0.68rem; font-weight:700; letter-spacing:0.08em; margin-top:0.15rem; color:#6b5d3f; }
+.p-hr{ border-top:1.5px solid var(--paper-ink); margin:0.5rem 0; }
+.p-hr-thin{ border-top:1px solid rgba(21,19,16,0.35); margin:0.45rem 0; }
+.p-nr{ text-align:center; font-size:2.1rem; font-weight:700; line-height:1; margin:0.3rem 0; }
+.p-badge{ text-align:center; font-size:0.66rem; font-weight:700; border:1.5px solid var(--paper-ink); border-radius:6px; padding:0.2rem 0; margin:0.4rem 0; }
+.p-item{ margin-bottom:0.55rem; padding-bottom:0.45rem; border-bottom:1px solid rgba(21,19,16,0.25); font-size:0.78rem; }
+.p-item .row{ display:flex; justify-content:space-between; font-weight:700; gap:0.4rem; }
+.p-item .opt{ padding-left:0.9rem; font-size:0.68rem; margin-top:0.15rem; }
+.p-item .pref{ display:inline-block; margin-top:0.2rem; margin-left:0.9rem; font-size:0.64rem; font-weight:700; border:1.5px solid var(--paper-ink); border-radius:5px; padding:0.05rem 0.35rem; }
+.p-total{ text-align:center; font-size:0.72rem; margin-top:0.2rem; }
+.p-total.final{ font-weight:700; font-size:0.86rem; }
+.p-inforow{ display:flex; justify-content:space-between; align-items:flex-end; font-size:0.66rem; }
+.p-inforow .nr{ font-size:1.4rem; font-weight:700; }
+.p-tip{ margin-top:0.5rem; }
+.p-tip-title{ text-align:center; font-size:0.62rem; font-weight:700; }
+.p-tip-sub{ text-align:center; font-size:0.52rem; color:#6b5d3f; margin:0.1rem 0 0.35rem; }
+.p-tip-row{ display:flex; align-items:center; gap:0.4rem; font-size:0.62rem; padding:0.12rem 0; }
+.p-tip-chk{ width:9px; height:9px; border:1.5px solid var(--paper-ink); display:inline-block; }
+
+/* ══ PHONE (dashboard live) ══ */
+.phone{
+  position:relative; width:280px; margin:0 auto;
+  background:linear-gradient(155deg,#2a2a2f,#0a0a0b 45%,#000 100%);
+  border-radius:46px; padding:6px;
+  box-shadow:
+    0 35px 80px -22px rgba(0,0,0,0.7),
+    inset 0 0 0 1px rgba(255,255,255,0.14),
+    inset 0 1px 1px rgba(255,255,255,0.18);
+}
+/* Butoane laterale — volum (stânga) și power (dreapta), ca pe un telefon real */
+.phone::before{
+  content:''; position:absolute; left:-2px; top:96px; width:3px; height:26px;
+  background:#0a0a0b; border-radius:2px 0 0 2px; box-shadow:0 38px 0 0 #0a0a0b, inset -1px 0 0 rgba(255,255,255,0.08);
+}
+.phone::after{
+  content:''; position:absolute; right:-2px; top:130px; width:3px; height:44px;
+  background:#0a0a0b; border-radius:0 2px 2px 0; box-shadow:inset 1px 0 0 rgba(255,255,255,0.08);
+}
+.phone-screen{
+  position:relative; background:var(--bg); border-radius:40px; overflow:hidden;
+  font-family:var(--body); padding-bottom:0.5rem;
+  box-shadow:inset 0 0 0 1px rgba(0,0,0,0.6);
+}
+/* Dynamic island */
+.phone-screen::before{
+  content:''; position:absolute; top:10px; left:50%; transform:translateX(-50%);
+  width:76px; height:20px; background:#000; border-radius:12px; z-index:6;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06);
+}
+.ph-home{
+  width:110px; height:4px; background:rgba(255,255,255,0.28); border-radius:99px;
+  margin:0.65rem auto 0.15rem;
+}
+.ph-status{ display:flex; justify-content:space-between; align-items:center; padding:1.9rem 1.2rem 0.3rem; }
+.ph-date{ font-family:var(--data); font-size:0.68rem; color:var(--muted); font-weight:700; }
+.ph-live{ display:flex; align-items:center; gap:0.35rem; font-family:var(--data); font-size:0.62rem; font-weight:700; color:var(--green); }
+.ph-live .dot{ width:6px; height:6px; border-radius:50%; background:var(--green); animation:phpulse 1.4s infinite; }
+@keyframes phpulse{ 0%,100%{opacity:1} 50%{opacity:0.25} }
+.ph-total-block{ padding:0.35rem 1.1rem 1rem; }
+.ph-total-lbl{ font-family:var(--data); font-size:0.65rem; color:var(--muted); letter-spacing:0.06em; font-weight:700; }
+.ph-total-val{ font-family:var(--data); font-size:1.9rem; font-weight:700; color:var(--gold); }
+.ph-split{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.5rem; padding:0 1.1rem 1rem; }
+.ph-split-item{ background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0.5rem 0.35rem; text-align:center; }
+.ph-split-item .lbl{ font-family:var(--data); font-size:0.56rem; color:var(--muted); font-weight:700; }
+.ph-split-item .val{ font-family:var(--data); font-size:0.76rem; font-weight:700; margin-top:0.2rem; }
+.ph-casa{ margin:0 1.1rem 1rem; background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:0.6rem 0.7rem; }
+.ph-casa-top{ display:flex; justify-content:space-between; font-family:var(--data); font-size:0.6rem; color:var(--muted); font-weight:700; margin-bottom:0.4rem; gap:0.4rem; }
+.ph-casa-bar{ height:6px; border-radius:99px; background:var(--surface3); overflow:hidden; }
+.ph-casa-bar-fill{ height:100%; background:var(--green); border-radius:99px; }
+.ph-produse{ margin:0 1.1rem; }
+.ph-produse-title{ font-family:var(--data); font-size:0.58rem; color:var(--muted); font-weight:700; letter-spacing:0.06em; margin-bottom:0.3rem; }
+.ph-prod-row{ display:flex; justify-content:space-between; align-items:center; padding:0.42rem 0; border-bottom:1px solid var(--border-soft); font-size:0.8rem; }
+.ph-prod-row:last-child{ border-bottom:none; }
+.ph-prod-row .nm{ font-weight:700; }
+.ph-prod-row .qty{ font-family:var(--data); font-size:0.68rem; color:var(--muted); }
+.ph-sync{ text-align:center; font-family:var(--data); font-size:0.58rem; color:var(--muted); margin-top:0.6rem; }
+
+/* ══ FEATURE GRID ══ */
+.fgrid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.1rem; margin-top:2.6rem; }
+@media (max-width:860px){ .fgrid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:560px){ .fgrid{ grid-template-columns:1fr; } }
+.ftile{
+  background:var(--surface); border:1px solid var(--border); border-radius:15px;
+  padding:1.35rem; display:flex; flex-direction:column; gap:0.6rem;
+  transition:border-color 0.15s, transform 0.15s;
+}
+.ftile:hover{ border-color:rgba(255,90,31,0.4); transform:translateY(-2px); }
+.ftile .fic{ font-size:1.4rem; }
+.ftile h4{ font-family:var(--display); font-size:1.02rem; font-weight:700; }
+.ftile p{ color:var(--text-dim); font-size:0.87rem; }
+
+/* ══ WHY ══ */
+.why{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; margin-top:2.6rem; }
+@media (max-width:800px){ .why{ grid-template-columns:1fr; } }
+.why-card{ padding:1.6rem 0; border-top:2px solid var(--accent); }
+.why-card .num{ font-family:var(--data); font-size:0.75rem; color:var(--muted); font-weight:700; }
+.why-card h3{ font-size:1.15rem; font-weight:700; margin:0.5rem 0 0.5rem; }
+.why-card p{ color:var(--text-dim); font-size:0.92rem; }
+
+/* ══ CTA / CONTACT ══ */
+.cta{
+  background:linear-gradient(180deg,var(--bg-soft),var(--bg));
+  border-top:1px solid var(--border-soft);
+}
+.cta-box{
+  background:var(--surface); border:1px solid var(--border); border-radius:22px;
+  padding:3rem 2.2rem; text-align:center;
+  background-image:radial-gradient(ellipse 60% 100% at 50% 0%, rgba(255,90,31,0.1), transparent 70%);
+}
+.cta-box h2{ font-size:clamp(1.7rem,3.4vw,2.3rem); font-weight:800; max-width:600px; margin:0.6rem auto 0.8rem; }
+.cta-box p{ color:var(--text-dim); max-width:480px; margin:0 auto; }
+.cta-actions{ display:flex; flex-wrap:wrap; justify-content:center; gap:0.9rem; margin-top:1.8rem; }
+.cta-hint{ font-size:0.78rem; color:var(--muted); margin-top:0.9rem; max-width:440px; margin-left:auto; margin-right:auto; }
+.cta-mobile-only{ display:none; }
+.cta-desktop-only{
+  margin-top:2rem; display:flex; flex-direction:column; align-items:center; gap:0.5rem;
+}
+.cta-phone-display{
+  font-family:var(--data); font-weight:700; font-size:1.4rem; color:var(--text);
+  letter-spacing:0.01em;
+}
+.cta-whatsapp-note{
+  display:flex; align-items:center; justify-content:center; gap:0.5rem;
+  font-size:0.85rem; color:var(--muted);
+}
+.cta-whatsapp-note .wa-icon{ width:1.15rem; height:1.15rem; flex-shrink:0; fill:#25D366; }
+@media (max-width:720px){
+  .cta-mobile-only{ display:flex; }
+  .cta-desktop-only{ display:none; }
+}
+
+/* ══ FAQ ══ */
+.faq{ margin-top:2rem; display:flex; flex-direction:column; gap:0.7rem; max-width:760px; }
+.faq details{ background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:1rem 1.2rem; }
+.faq summary{ cursor:pointer; font-family:var(--display); font-weight:700; font-size:1rem; }
+.faq details p{ color:var(--text-dim); font-size:0.92rem; margin-top:0.6rem; }
+.foot-area{ width:100%; font-size:0.78rem; color:var(--muted); line-height:1.5; }
+
+/* ══ FOOTER ══ */
+footer{ padding:2.2rem 0; border-top:1px solid var(--border-soft); }
+.foot-inner{ display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:1rem; }
+.foot-inner .wordmark{ font-size:1.02rem; }
+.foot-meta{ font-family:var(--data); font-size:0.78rem; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="wordmark-block">
+      <div class="wordmark">Generic<span class="dot">•</span><span class="pos-mark">POS<span class="tm">®</span></span></div>
+      <div class="wordmark-sub">marcă înregistrată</div>
+    </div>
+    <a class="nav-cta" href="#contact">Programează demo</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-head">
+      <div class="eyebrow">Software vânzare pentru HoReCa</div>
+      <h1>Sala, bucătăria și casa<br>de marcat, <em>sincronizate</em><br>într‑un singur program.</h1>
+      <p class="hero-sub">Generic POS leagă sala, bucătăria și casa de marcat într-un singur flux — de la comanda luată la masă, până la bonul fiscal. Gândit pentru orice tip de local — cu servire la masă sau cu vânzare rapidă.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#contact">Programează o demonstrație</a>
+        <a class="btn btn-ghost" href="#cum-functioneaza">Vezi cum funcționează ↓</a>
+      </div>
+      <div class="hero-trust">
+        <span><b>✓</b> Instalare și probă gratuite</span>
+        <span><b>✓</b> Se învață din prima tură</span>
+        <span><b>✓</b> Funcționează fără internet</span>
+        <span><b>✓</b> Bon fiscal integrat</span>
+        <span><b>✓</b> Local, din Rădăuți (Radauti) — jud. Suceava</span>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+    <div class="device">
+      <div class="device-screen">
+        <div class="m-topbar">
+          <div class="m-topbar-left"><span class="m-back">← Ieși</span> Masa 7</div>
+        </div>
+        <div class="m-cattabs">
+          <div class="m-cattab active">Fel principal</div>
+          <div class="m-cattab">Garnituri</div>
+          <div class="m-cattab">Băuturi</div>
+          <div class="m-cattab">Deserturi</div>
+        </div>
+        <div class="m-body">
+          <div class="m-grid">
+            <div class="m-prod"><span class="em">🍕</span><span class="nm">Pizza Quattro Stagioni</span><span class="pr">42.00 lei</span></div>
+            <div class="m-prod"><span class="em">🍝</span><span class="nm">Paste Carbonara</span><span class="pr">38.00 lei</span></div>
+            <div class="m-prod"><span class="em">🥩</span><span class="nm">Ceafă la grătar</span><span class="pr">45.00 lei</span></div>
+            <div class="m-prod"><span class="em">🍟</span><span class="nm">Cartofi prăjiți</span><span class="pr">15.00 lei</span></div>
+            <div class="m-prod"><span class="em">🥗</span><span class="nm">Salată Caesar</span><span class="pr">28.00 lei</span></div>
+            <div class="m-prod"><span class="em">🍺</span><span class="nm">Bere 0.5L</span><span class="pr">12.00 lei</span></div>
+          </div>
+          <div class="m-cart">
+            <div class="m-cart-head">Masa 7</div>
+            <div class="m-cart-items">
+              <div class="m-cart-item"><div class="nm"><span>1x Ceafă la grătar</span><span class="pr">45.00</span></div><div class="opt">&gt;&gt; Cartofi prăjiți (+5 lei)</div></div>
+              <div class="m-cart-item"><div class="nm"><span>1x Pizza Quattro</span><span class="pr">42.00</span></div></div>
+              <div class="m-cart-item"><div class="nm"><span>2x Bere 0.5L</span><span class="pr">24.00</span></div></div>
+            </div>
+            <div class="m-cart-foot">
+              <div class="m-total"><span class="lbl">TOTAL</span><span class="val">116.00 lei</span></div>
+              <div class="m-pay"><div class="m-paybtn cash">CASH</div><div class="m-paybtn card">CARD</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="device-stand"></div>
+    <div class="printer"><div class="printer-paper"></div></div>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Ușor de folosit</div>
+    <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800;margin:0.7rem 0 0.5rem;max-width:640px;">Vânzarea nu trebuie să fie complicată.</h2>
+    <p style="color:var(--text-dim);max-width:600px;">Ecranul de vânzare are un singur scop: să vinzi rapid. Fără meniuri ascunse, fără pași inutili — orice om nou din echipă îl înțelege din prima tură. Tot ce e sensibil (reduceri, editarea hărții) rămâne blocat cu cod de manager, ca restul echipei să lucreze liber, fără riscul unei greșeli.</p>
+    <div class="steps">
+      <div class="step">
+        <div class="stepicon">👆</div>
+        <div class="stepnum">PASUL 1</div>
+        <h4>Atingi produsul</h4>
+        <p>Ecran mare, butoane mari — vezi tot meniul organizat pe categorii, dintr-o privire.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="stepicon">🍟</div>
+        <div class="stepnum">PASUL 2</div>
+        <h4>Alegi opțiunile, dacă are</h4>
+        <p>Garnitură, sos, salată — programul te ghidează pas cu pas, doar când produsul chiar are de ales.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step">
+        <div class="stepicon">💳</div>
+        <div class="stepnum">PASUL 3</div>
+        <h4>Încasezi</h4>
+        <p>Cash, card sau consum propriu — un singur buton, iar bonul fiscal pleacă automat din casa de marcat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="cum-functioneaza">
+  <div class="wrap">
+    <div class="eyebrow">Alege modul de lucru</div>
+    <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800;margin:0.7rem 0 0.5rem;max-width:640px;">Un singur program, două moduri de vânzare</h2>
+    <p style="color:var(--text-dim);max-width:600px;">Generic POS se adaptează la felul în care lucrează localul tău — nu invers. Alegi modul potrivit o singură dată, la instalare, și tot ce urmează e construit în jurul lui.</p>
+
+    <div class="modes">
+      <div class="mode-card">
+        <div class="mode-icon">🗺️</div>
+        <h3>Sală cu hartă</h3>
+        <p>Pentru restaurante cu servire la masă. Harta sălii arată dintr-o privire ce mese sunt libere și ce mese sunt ocupate, organizate pe zone (interior, terasă, separeu). Apeși pe o masă și intri direct în comanda ei.</p>
+        <div class="m-harta">
+          <div class="m-zonetabs">
+            <div class="m-zonetab active">Interior</div>
+            <div class="m-zonetab">Terasă</div>
+          </div>
+          <div class="m-masa libera round" style="width:46px;height:46px;top:32%;left:20%;">3</div>
+          <div class="m-masa ocupata square" style="width:44px;height:44px;top:60%;left:38%;">7</div>
+          <div class="m-masa libera rect" style="width:66px;height:34px;top:24%;left:62%;">12</div>
+          <div class="m-masa ocupata round" style="width:44px;height:44px;top:70%;left:74%;">5</div>
+          <div class="m-masa libera square" style="width:42px;height:42px;top:48%;left:85%;">9</div>
+        </div>
+      </div>
+
+      <div class="mode-card">
+        <div class="mode-icon">🧾</div>
+        <h3>Tejgheaua</h3>
+        <p>Pentru fast-food, cafenele sau livrări. Fără hartă de mese — vânzare rapidă, direct din meniu, cu tot ecranul dedicat produselor și coșului de comandă. Simplu, rapid, fără pași în plus.</p>
+        <div class="m-tejgheaua">
+          <div class="m-cattabs" style="border-bottom:1px solid var(--border);">
+            <div class="m-cattab active">Cafea</div>
+            <div class="m-cattab">Patiserie</div>
+            <div class="m-cattab">Sucuri</div>
+          </div>
+          <div style="display:flex;">
+            <div class="m-grid" style="grid-template-columns:repeat(2,1fr);">
+              <div class="m-prod"><span class="em">☕</span><span class="nm">Cappuccino</span><span class="pr">11.00 lei</span></div>
+              <div class="m-prod"><span class="em">🥐</span><span class="nm">Croissant</span><span class="pr">9.00 lei</span></div>
+            </div>
+            <div class="m-cart" style="width:130px;">
+              <div class="m-cart-head" style="font-size:0.7rem;">Comandă</div>
+              <div class="m-cart-items">
+                <div class="m-cart-item"><div class="nm"><span>2x Cappuccino</span><span class="pr">22.00</span></div></div>
+              </div>
+              <div class="m-cart-foot">
+                <div class="m-total"><span class="lbl">TOTAL</span><span class="val" style="font-size:0.9rem;">22.00</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="split-text">
+      <div class="eyebrow">De la masă la bucătărie</div>
+      <h2>Bucătăria primește exact ce trebuie, în secunde.</h2>
+      <p>Comanda ajunge automat la bucătărie, imprimată sau pe ecran, cu numărul comenzii uriaș, garniturile alese și restricțiile alimentare ale clientului (ex. "FĂRĂ ceapă"). Nu-ți face griji, sucurile, cafelele și altele asemenea, nu ajung pe ecranul bucătăriei, firește.</p>
+      <ul class="split-list">
+        <li>Excludere automată pe categorii (băuturi, ambalaje) — bucătăria nu se aglomerează cu ce nu o privește</li>
+        <li>OPȚIONAL — Ecran de bucătărie tip TV, cu comenzile care întârzie evidențiate automat</li>
+        <li>Bon termic clar, cu litere mari, gândit să fie citit dintr-o privire pe o bară de bonuri</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="paper">
+        <div class="p-header">LOCALUL TĂU</div>
+        <div class="p-sub">BON BUCĂTĂRIE</div>
+        <div class="p-hr"></div>
+        <div style="text-align:center;font-size:0.62rem;">22.09.2026&nbsp;&nbsp;20:14</div>
+        <div style="text-align:center;font-size:0.66rem;">MASA 7</div>
+        <div class="p-hr"></div>
+        <div style="text-align:center;font-size:0.6rem;font-weight:700;">COMANDA</div>
+        <div class="p-nr">#128</div>
+        <div class="p-badge">SERVEȘTE AICI</div>
+        <div class="p-item">
+          <div class="row"><span>1x Ceafă la grătar</span></div>
+          <div class="opt">&gt;&gt; Cartofi prăjiți</div>
+          <div class="pref">FĂRĂ ceapă</div>
+        </div>
+        <div class="p-item">
+          <div class="row"><span>1x Pizza Quattro Stagioni</span></div>
+          <div class="opt">&gt;&gt; Sos de roșii dulce</div>
+        </div>
+        <div class="p-hr-thin"></div>
+        <div class="p-total">Total produse: 2</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split rev">
+    <div class="split-text">
+      <div class="eyebrow">La plată</div>
+      <h2>Nota de plată, cu bacșișul cerut de lege gata pregătit.</h2>
+      <p>Bonul de plată e compact, ușor de citit de client, cu variantele de bacșiș (5% / 10% / 15% / altă sumă) tipărite direct pe el, conform Legii 376/2022. Plata se face cash, cu cardul sau ca și consum propriu, iar bonul fiscal pleacă direct din casa de marcat conectată.</p>
+      <ul class="split-list">
+        <li>Integrare directă cu casa de marcat fiscală (Datecs / Partner)</li>
+        <li>Rapoarte X, bani în casă și istoric de vânzări, oricând la îndemână</li>
+        <li>Backup automat și arhivare — istoricul nu se pierde niciodată</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="paper compact">
+        <div class="p-header">LOCALUL TĂU</div>
+        <div class="p-hr"></div>
+        <div class="p-inforow">
+          <span class="nr">#128</span>
+          <span style="text-align:right;">22.09.2026 20:14<br>Masa 7</span>
+        </div>
+        <div class="p-hr"></div>
+        <div class="p-item">
+          <div class="row" style="font-weight:400;"><span>1x Ceafă la grătar</span><span>45.00</span></div>
+          <div class="opt" style="display:flex;justify-content:space-between;"><span>&gt;&gt; Cartofi prăjiți</span><span>5.00</span></div>
+        </div>
+        <div class="p-item">
+          <div class="row" style="font-weight:400;"><span>1x Pizza Quattro Stagioni</span><span>42.00</span></div>
+        </div>
+        <div class="p-hr"></div>
+        <div class="p-total">Total produse: 2</div>
+        <div class="p-total final">Total: 92.00 RON</div>
+        <div class="p-hr-thin"></div>
+        <div class="p-tip">
+          <div class="p-tip-title">BACȘIȘ (opțional)</div>
+          <div class="p-tip-sub">conform Legii 376/2022 — la libera alegere a clientului</div>
+          <div class="p-tip-row"><span class="p-tip-chk"></span> 5% (4.60 lei)</div>
+          <div class="p-tip-row"><span class="p-tip-chk"></span> 10% (9.20 lei)</div>
+          <div class="p-tip-row"><span class="p-tip-chk"></span> 15% (13.80 lei)</div>
+          <div class="p-tip-row"><span class="p-tip-chk"></span> Altă sumă: _________ lei</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap split">
+    <div class="split-text">
+      <div class="eyebrow">Aplicație de control și verificare la distanță</div>
+      <h2>Vezi ce se întâmplă în local, live, de pe telefon.</h2>
+      <p>La fiecare vânzare încasată, programul trimite automat un instantaneu către un tablou de bord pe care îl vezi de pe telefon, de oriunde ai fi — nu doar la finalul zilei, ci pe măsură ce se întâmplă.</p>
+      <ul class="split-list">
+        <li>Totalul vânzărilor de azi, actualizat automat la fiecare comandă încasată</li>
+        <li>Împărțit pe cash, card și consum propriu</li>
+        <li>Sold de casă urmărit față de pragul legal de 50.000 lei</li>
+        <li>Topul produselor vândute azi, fără să deschizi vreun raport</li>
+      </ul>
+    </div>
+    <div class="split-visual">
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="ph-status">
+            <div class="ph-date">AZI · 22 SEP</div>
+            <div class="ph-live"><span class="dot"></span>LIVE</div>
+          </div>
+          <div class="ph-total-block">
+            <div class="ph-total-lbl">TOTAL VÂNZĂRI AZI</div>
+            <div class="ph-total-val">4.420,00 lei</div>
+          </div>
+          <div class="ph-split">
+            <div class="ph-split-item"><div class="lbl">CASH</div><div class="val">2.180</div></div>
+            <div class="ph-split-item"><div class="lbl">CARD</div><div class="val">1.960</div></div>
+            <div class="ph-split-item"><div class="lbl">CONSUM</div><div class="val">280</div></div>
+          </div>
+          <div class="ph-casa">
+            <div class="ph-casa-top"><span>SOLD CASĂ</span><span>2.180 / 50.000 lei</span></div>
+            <div class="ph-casa-bar"><div class="ph-casa-bar-fill" style="width:4%;"></div></div>
+          </div>
+          <div class="ph-produse">
+            <div class="ph-produse-title">TOP PRODUSE AZI</div>
+            <div class="ph-prod-row"><span class="nm">Bere 0.5L</span><span class="qty">×31</span></div>
+            <div class="ph-prod-row"><span class="nm">Pizza Quattro Stagioni</span><span class="qty">×22</span></div>
+            <div class="ph-prod-row"><span class="nm">Ceafă la grătar</span><span class="qty">×17</span></div>
+            <div class="ph-prod-row"><span class="nm">Paste Carbonara</span><span class="qty">×11</span></div>
+          </div>
+          <div class="ph-sync">Sincronizat acum 8 secunde</div>
+          <div class="ph-home"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Funcționalități</div>
+    <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800;margin:0.7rem 0 0.5rem;max-width:640px;">Tot ce ai nevoie ca să conduci un local, într-un singur program</h2>
+    <div class="fgrid">
+      <div class="ftile"><span class="fic">🗺️</span><h4>Hartă de sală personalizabilă</h4><p>Mese de orice formă și mărime, organizate pe zone colorate, poziționate exact ca în local — editabilă oricând, protejată cu cod de manager.</p></div>
+      <div class="ftile"><span class="fic">🍽️</span><h4>Opțiuni de produs în cascadă</h4><p>Garnitură, sos, salată — alese pas cu pas, cu suprataxe calculate automat, direct pe bon și pe bonul de bucătărie.</p></div>
+      <div class="ftile"><span class="fic">🍳</span><h4>Ecran de bucătărie live (opțional)</h4><p>Comenzile apar automat pe un ecran TV din bucătărie, cu cele întârziate marcate vizual, fără să fie nevoie de scroll.</p></div>
+      <div class="ftile"><span class="fic">🖨️</span><h4>Tipărire termică completă</h4><p>Bon de comandă, bon de bucătărie și notă de plată — fiecare formatat diferit, potrivit pentru cine îl citește.</p></div>
+      <div class="ftile"><span class="fic">💳</span><h4>Integrare cu casa de marcat</h4><p>Integrare vastă cu toate casele de marcat și imprimantele termice disponibile pe piață — bonul fiscal pleacă automat, fără pași manuali.</p></div>
+      <div class="ftile"><span class="fic">📊</span><h4>Rapoarte & bani în casă</h4><p>Raport X, verificare bani în casă și istoric de vânzări arhivat automat, fără să încarce aplicația în timp.</p></div>
+      <div class="ftile"><span class="fic">🔒</span><h4>Control cu PIN de manager</h4><p>Reducerile, editarea hărții și alte acțiuni sensibile cer codul de manager — restul echipei lucrează liber, fără riscuri.</p></div>
+      <div class="ftile"><span class="fic">💾</span><h4>Siguranța datelor</h4><p>Backup automat pe oră și arhivare a istoricului vechi. La cerere, istoricul poate fi exportat pe un stick USB personal și șters definitiv din aplicație.</p></div>
+      <div class="ftile"><span class="fic">📦</span><h4>SGR & taxă ambalaj</h4><p>Gestionate automat pe bon, conform legislației — fără calcule manuale la fiecare vânzare.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Ce îți trebuie</div>
+    <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800;margin:0.7rem 0 0.5rem;max-width:640px;">Instalare simplă, fără investiții mari în hardware.</h2>
+    <div class="modes">
+      <div class="mode-card">
+        <div class="mode-icon">🖥️</div>
+        <h3>Setup minim</h3>
+        <p>Ai nevoie doar de un calculator (sau o tabletă), o casă de marcat fiscală și o imprimantă termică — atât. Restul, programul îl face.</p>
+      </div>
+      <div class="mode-card">
+        <div class="mode-icon">🔄</div>
+        <h3>Local nou sau deja existent</h3>
+        <p>Lucrăm atât cu unități noi, deschise sau care urmează să fie deschise, cât și cu locații deja existente — facem migrarea completă de pe softul actual, pe al nostru.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">De ce Generic POS</div>
+    <div class="why">
+      <div class="why-card">
+        <div class="num">01</div>
+        <h3>Instalare și probă gratuite</h3>
+        <p>Vii, îl vezi funcționând pe loc, la mesele tale, cu produsele tale. Decizi abia după ce l-ai testat cu adevărat.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">02</div>
+        <h3>Fără costuri ascunse</h3>
+        <p>Fără taxe de activare, fără clauze care te leagă pe termen lung. Ce vezi la instalare e ce plătești.</p>
+      </div>
+      <div class="why-card">
+        <div class="num">03</div>
+        <h3>Suport direct, de la echipa ce l-a construit</h3>
+        <p>Nu vorbești cu un call-center. Orice problemă sau idee ajunge direct la echipa care a scris programul.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Întrebări frecvente</div>
+    <h2 style="font-size:clamp(1.7rem,3.4vw,2.3rem);font-weight:800;margin:0.7rem 0 0.5rem;max-width:700px;">Program de vânzare pentru restaurant în Rădăuți (Radauti) și Suceava</h2>
+    <p style="color:var(--text-dim);max-width:640px;">Generic POS este o firmă locală din Rădăuți. Instalăm și întreținem programul de vânzare pentru restaurante, baruri și fast-food în Radauti, Suceava și în tot județul.</p>
+    <div class="faq">
+      <details>
+        <summary>Aveți nevoie de program de vânzare pentru restaurant în Radauti?</summary>
+        <p>Venim la tine în local, instalăm Generic POS și îl testezi gratuit pe mesele și produsele tale reale. Lucrăm în Radauti, Suceava, Putna, Vicov, Siret, Gura Humorului, Câmpulung Moldovenesc și în împrejurimi.</p>
+      </details>
+      <details>
+        <summary>Se conectează la casa de marcat?</summary>
+        <p>Da. Bonul fiscal pleacă automat din casa de marcat conectată, fără pași manuali. Lucrăm cu casele de marcat și imprimantele termice uzuale din piață.</p>
+      </details>
+      <details>
+        <summary>Pot trece de pe softul actual pe Generic POS?</summary>
+        <p>Da. Facem migrarea completă de pe softul actual, atât pentru localuri noi, cât și pentru cele deja existente.</p>
+      </details>
+      <details>
+        <summary>Cât costă instalarea și proba?</summary>
+        <p>Instalarea și proba sunt gratuite, fără angajament. Ne poți suna sau scrie pe WhatsApp la 0721 217 437 ca să programăm o demonstrație la tine în local.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="cta-box">
+      <div class="eyebrow">Hai să vedem cum arată la tine</div>
+      <h2>Programează o demonstrație gratuită, la localul tău.</h2>
+      <p>Suntem din Rădăuți și lucrăm cu localuri din tot județul Suceava, dar și din afara lui. Venim la tine, cu programul instalat, gata de testat pe mesele și produsele tale reale — fără niciun angajament.</p>
+      <div class="cta-actions cta-mobile-only">
+        <a class="btn btn-primary" id="btn-whatsapp" target="_top" href="https://wa.me/40721217437?text=Bun%C4%83%20ziua%2C%20a%C8%99%20vrea%20s%C4%83%20programez%20o%20demonstra%C8%9Bie%20Generic%20POS." rel="noopener"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" style="width:1.05rem;height:1.05rem;fill:#0a0800;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg> Scrie pe WhatsApp</a>
+        <a class="btn btn-ghost" id="btn-suna-acum" target="_top" href="tel:+40721217437">📞 Sună acum</a>
+      </div>
+      <div class="cta-desktop-only">
+        <div class="cta-phone-display">📞 0721 217 437</div>
+        <div class="cta-whatsapp-note">
+          <svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.571-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413"/></svg>
+          <span>Ne puteți contacta și pe WhatsApp, la același număr de telefon.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-inner">
+    <div class="wordmark-block">
+      <div class="wordmark">Generic<span class="dot">•</span><span class="pos-mark">POS<span class="tm">®</span></span></div>
+      <div class="wordmark-sub">marcă înregistrată</div>
+    </div>
+    <div class="foot-meta">Rădăuți (Radauti), jud. Suceava · oferta@genericpos.ro · 0721 217 437</div>
+    <div class="foot-area">Firmă locală din Rădăuți (Radauti), județul Suceava. Program de vânzare pentru restaurante și baruri în Radauti, Suceava, Putna, Vicov, Siret, Gura Humorului, Câmpulung Moldovenesc și împrejurimi.</div>
+    <div class="foot-area"><a href="/confidentialitate">Politica de confidențialitate</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
