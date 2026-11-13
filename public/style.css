@@ -426,3 +426,16 @@ main > section:nth-of-type(even){ background:#f1f6f3; }
 .svc-cta .btn-primary:hover{ background:#9be0be; }
 .svc-cta .btn-ghost{ border-color:#c9c6bf; color:#fff; }
 .svc-cta .btn-ghost:hover{ background:#fff; color:var(--ink); }
+
+/* terminal, QR, FAB */
+.pos-terminal{ display:flex; justify-content:center; }
+.pos-svg{ width:150px; height:auto; filter:drop-shadow(0 8px 12px rgba(16,38,28,.28)); }
+.flow{ grid-template-columns:minmax(0,1fr) auto auto; }
+.p-qr{ border-top:1px dashed #999; margin-top:.8rem; padding-top:.7rem; text-align:center; }
+.p-qr .qr-svg{ width:84px; height:84px; display:block; margin:0 auto .4rem; }
+.p-qr-t{ font-weight:700; font-size:.75rem; }
+.p-qr-s{ font-size:.66rem; opacity:.7; }
+.fab{ position:fixed; z-index:60; bottom:16px; right:16px; text-decoration:none; box-shadow:0 4px 14px rgba(0,0,0,.28); }
+.fab-wa{ width:52px; height:52px; border-radius:50%; background:#25d366; display:flex; align-items:center; justify-content:center; bottom:78px; }
+.fab-call{ background:var(--brand); color:#fff; font-weight:700; font-size:.95rem; padding:.8rem 1.2rem; border-radius:999px; }
+@media(max-width:700px){ .flow{ grid-template-columns:1fr; } footer{ padding-bottom:6rem; } }

@@ -53,7 +53,7 @@
       <div class="wordmark">Generic<span class="dot">•</span><span class="pos-mark">POS<span class="tm">®</span></span></div>
       <div class="wordmark-sub">marcă înregistrată</div>
     </a>
-    <div class="nav-links"><a href="#cum-functioneaza">Cum funcționează</a><a href="#card">Plata cu cardul</a><a href="#functionalitati">Funcționalități</a><a href="/servicii">Servicii</a><a href="#contact">Contact</a></div>
+    <div class="nav-links"><a href="#cum-functioneaza">Cum funcționează</a><a href="#card">Plata cu cardul</a><a href="#functionalitati">Funcționalități</a><a href="/servicii">Servicii suplimentare</a><a href="#contact">Contact</a></div>
     <a class="nav-cta" href="#contact">Programează demo</a>
   </div>
 </nav>
@@ -131,7 +131,7 @@
       <ul class="split-list">
         <li>Fără erori umane: suma pe POS e mereu aceeași cu totalul comenzii</li>
         <li>Încasare mai rapidă la casă, fără pași în plus pentru angajat</li>
-        <li>Bonul fiscal pleacă automat din casa de marcat, după încasare</li>
+        <li>Bonul fiscal pleacă automat din casa de marcat, după încasarea reușită</li>
         <li>Verificăm împreună la demonstrație compatibilitatea cu POS-ul băncii tale</li>
       </ul>
     </div>
@@ -144,12 +144,18 @@
           <div class="scr-btn">CARD</div>
         </div>
         <div class="flow-arrow"><span>suma pleacă automat</span><svg viewBox="0 0 48 16" aria-hidden="true"><path d="M0 8h44M37 1l8 7-8 7" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
-        <div class="scr scr-pos">
-          <div class="scr-top">POS bancă</div>
-          <div class="scr-lbl">DE PLATĂ</div>
-          <div class="scr-val">116,00 RON</div>
-          <div class="scr-hint">Apropie cardul</div>
-        </div>
+        <div class="pos-terminal"><svg class="pos-svg" viewBox="0 0 150 280" role="img" aria-label="Terminal POS bancar">
+<defs><linearGradient id="tb" x1="0" x2="1"><stop offset="0" stop-color="#2b3138"/><stop offset=".5" stop-color="#3a424b"/><stop offset="1" stop-color="#23282e"/></linearGradient></defs>
+<rect x="38" y="4" width="74" height="30" rx="2" fill="#fff" stroke="#d6dbd8"/><path d="M48 14h54M48 20h40M48 26h48" stroke="#c4cbc7" stroke-width="2"/>
+<rect x="14" y="30" width="122" height="244" rx="16" fill="url(#tb)"/>
+<rect x="14" y="30" width="122" height="244" rx="16" fill="none" stroke="#12161a" stroke-width="2"/>
+<rect x="26" y="44" width="98" height="82" rx="6" fill="#0c1a14" stroke="#6b7680"/>
+<text x="75" y="62" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#9fb3a8" letter-spacing="1">DE PLATĂ</text>
+<text x="75" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="16" font-weight="700" fill="#7fd1a8">116,00 RON</text>
+<g transform="translate(0,-8) scale(1)" fill="none" stroke="#7fd1a8" stroke-width="2" stroke-linecap="round"><path d="M64 98a12 12 0 0 1 0 14"/><path d="M70 94a18 18 0 0 1 0 22"/><path d="M76 90a24 24 0 0 1 0 30"/></g>
+<text x="75" y="122" text-anchor="middle" font-family="Inter,sans-serif" font-size="6.5" fill="#9fb3a8">Apropie cardul</text>
+<g font-family="Inter,sans-serif" font-size="10" font-weight="600" text-anchor="middle" fill="#e8ecea">
+<rect x="28" y="138" width="30" height="19" rx="4" fill="#4a535c"/><text x="43" y="151">1</text><rect x="62" y="138" width="30" height="19" rx="4" fill="#4a535c"/><text x="77" y="151">2</text><rect x="96" y="138" width="30" height="19" rx="4" fill="#4a535c"/><text x="111" y="151">3</text><rect x="28" y="162" width="30" height="19" rx="4" fill="#4a535c"/><text x="43" y="175">4</text><rect x="62" y="162" width="30" height="19" rx="4" fill="#4a535c"/><text x="77" y="175">5</text><rect x="96" y="162" width="30" height="19" rx="4" fill="#4a535c"/><text x="111" y="175">6</text><rect x="28" y="186" width="30" height="19" rx="4" fill="#4a535c"/><text x="43" y="199">7</text><rect x="62" y="186" width="30" height="19" rx="4" fill="#4a535c"/><text x="77" y="199">8</text><rect x="96" y="186" width="30" height="19" rx="4" fill="#4a535c"/><text x="111" y="199">9</text><rect x="28" y="210" width="30" height="19" rx="4" fill="#c0392b"/><text x="43" y="223">✕</text><rect x="62" y="210" width="30" height="19" rx="4" fill="#4a535c"/><text x="77" y="223">0</text><rect x="96" y="210" width="30" height="19" rx="4" fill="#1f9d63"/><text x="111" y="223">✓</text></g><rect x="30" y="238" width="90" height="4" rx="2" fill="#12161a"/><text x="75" y="260" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" font-weight="700" fill="#8a949c" letter-spacing="2">BANCA TA</text></svg></div>
       </div>
     </div>
   </div>
@@ -358,6 +364,7 @@
           <div class="p-tip-row"><span class="p-tip-chk"></span> 15% (13.80 lei)</div>
           <div class="p-tip-row"><span class="p-tip-chk"></span> Altă sumă: _________ lei</div>
         </div>
+        <div class="p-qr"><svg class="qr-svg" aria-label="Cod QR recenzii" xmlns="http://www.w3.org/2000/svg" width="75" height="75" class="segno"><path transform="scale(3)" class="qrline" stroke="#10261c" d="M0 0.5h7m2 0h2m2 0h1m4 0h7m-25 1h1m5 0h1m1 0h1m1 0h1m1 0h2m2 0h1m1 0h1m5 0h1m-25 1h1m1 0h3m1 0h1m1 0h2m1 0h2m1 0h1m1 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m1 0h1m2 0h6m1 0h1m1 0h3m1 0h1m-25 1h1m1 0h3m1 0h1m4 0h1m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m-25 1h1m5 0h1m2 0h1m1 0h1m1 0h2m3 0h1m5 0h1m-25 1h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7m-17 1h3m-11 1h1m5 0h1m1 0h1m2 0h8m2 0h3m-24 1h3m1 0h1m2 0h1m1 0h3m3 0h1m3 0h5m-24 1h2m2 0h1m1 0h3m1 0h4m1 0h7m1 0h2m-20 1h1m2 0h5m2 0h1m1 0h3m1 0h1m2 0h1m-23 1h3m1 0h1m1 0h1m3 0h1m2 0h2m1 0h2m4 0h1m-25 1h2m2 0h1m2 0h3m3 0h1m1 0h2m2 0h1m3 0h1m-24 1h1m1 0h5m3 0h8m1 0h3m1 0h2m-25 1h1m3 0h1m2 0h2m1 0h2m4 0h1m2 0h1m1 0h2m1 0h1m-25 1h1m2 0h4m1 0h2m1 0h1m1 0h1m2 0h5m1 0h1m-15 1h1m1 0h1m1 0h2m2 0h1m3 0h1m-21 1h7m3 0h2m4 0h1m1 0h1m1 0h1m3 0h1m-25 1h1m5 0h1m2 0h2m1 0h1m1 0h3m3 0h1m-21 1h1m1 0h3m1 0h1m2 0h2m1 0h1m2 0h6m1 0h3m-25 1h1m1 0h3m1 0h1m7 0h1m2 0h2m4 0h2m-25 1h1m1 0h3m1 0h1m3 0h3m2 0h1m5 0h2m1 0h1m-25 1h1m5 0h1m4 0h1m3 0h6m3 0h1m-25 1h7m1 0h1m1 0h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h1"/></svg><div class="p-qr-t">Ți-a plăcut? Lasă-ne o recenzie</div><div class="p-qr-s">Scanează codul cu telefonul</div></div>
       </div>
     </div>
   </div>
@@ -462,7 +469,7 @@
       <div class="price-box">
         <div class="price-from">Abonament de la</div>
         <div class="price-val">85 lei <small>/ lună</small></div>
-        <div class="price-setup"><span>Instalare, o singură dată</span><strong>400 lei</strong></div>
+        <div class="price-setup"><span>Instalare, o singură dată, se achită după cele 14 zile de probă</span><strong>400 lei</strong></div>
         <p class="price-note">Instalarea include integrarea cu casa de marcat și imprimanta, plus migrarea datelor din programul existent sau introducerea lor de la zero pentru localurile noi.</p>
         <a class="btn btn-primary" href="#contact">Cere o demonstrație GRATUITĂ</a>
       </div>
@@ -498,7 +505,7 @@
       <div class="why-card">
         <div class="num">02</div>
         <h3>Fără costuri ascunse</h3>
-        <p>Instalarea costă 400 lei, o singură dată, iar abonamentul pornește de la 85 lei pe lună. Fără alte taxe și fără clauze care te leagă pe termen lung.</p>
+        <p>Instalarea costă 400 lei, o singură dată, și se achită abia după cele 14 zile de probă, deci în primele 14 zile costurile sunt zero. Abonamentul pornește de la 85 lei pe lună. Fără alte taxe și fără clauze care te leagă pe termen lung.</p>
       </div>
       <div class="why-card">
         <div class="num">03</div>
@@ -529,7 +536,7 @@
       </details>
       <details>
         <summary>Cât costă și cât durează proba?</summary>
-        <p>Abonamentul pornește de la 85 lei pe lună, iar instalarea costă 400 lei, o singură dată, cu integrarea la casa de marcat și imprimantă și migrarea datelor incluse. Proba durează 14 zile și este gratuită. O rulezi în paralel cu programul actual de vânzare, fără angajament. Ne poți suna sau scrie pe WhatsApp la 0721 217 437 ca să programăm o demonstrație la tine în local.</p>
+        <p>Abonamentul pornește de la 85 lei pe lună, iar instalarea costă 400 lei, o singură dată, cu integrarea la casa de marcat și imprimantă și migrarea datelor incluse. Proba durează 14 zile și este gratuită, iar cei 400 lei de instalare se achită abia după ea: în primele 14 zile costurile sunt zero. O rulezi în paralel cu programul actual de vânzare, fără angajament. Ne poți suna sau scrie pe WhatsApp la 0721 217 437 ca să programăm o demonstrație la tine în local.</p>
       </details>
     </div>
   </div>
@@ -566,9 +573,12 @@
     </div>
     <div class="foot-meta">Rădăuți (Radauti), jud. Suceava · oferta@genericpos.ro · 0721 217 437</div>
     <div class="foot-area">Firmă locală din Rădăuți (Radauti), județul Suceava. Program de vânzare pentru restaurante și baruri în Radauti, Suceava, Putna, Vicov, Siret, Gura Humorului, Câmpulung Moldovenesc și împrejurimi.</div>
-    <div class="foot-area"><a href="/servicii">Servicii</a> · <a href="/confidentialitate">Politica de confidențialitate</a></div>
+    <div class="foot-area"><a href="/servicii">Servicii suplimentare</a> · <a href="/confidentialitate">Politica de confidențialitate</a></div>
   </div>
 </footer>
+<a class="fab fab-wa" href="https://wa.me/40721217437" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2zm5.2 14c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-3.9-4.7-4.1-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.6c-.1.2-.3.3-.1.6.2.3.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.1.4.1.6-.1l.8-1c.2-.3.4-.2.600-.1l1.900.9c.3.1.5.2.5.3.1.2.1.8-.2 1.400z"/></svg></a>
+<a class="fab fab-call" href="tel:+40721217437">Sună acum</a>
+
 
 </body>
 </html>
