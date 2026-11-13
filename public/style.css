@@ -439,3 +439,5 @@ main > section:nth-of-type(even){ background:#f1f6f3; }
 .fab-wa{ width:52px; height:52px; border-radius:50%; background:#25d366; display:flex; align-items:center; justify-content:center; bottom:78px; }
 .fab-call{ background:var(--brand); color:#fff; font-weight:700; font-size:.95rem; padding:.8rem 1.2rem; border-radius:999px; }
 @media(max-width:700px){ .flow{ grid-template-columns:1fr; } footer{ padding-bottom:6rem; } }
+
+.opt-note{ font-size:.85rem; color:var(--brand-dark); font-weight:600; margin-top:1rem; }
